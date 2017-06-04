@@ -1,0 +1,246 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:n39-kicad
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CAT4101 U1
+U 1 1 5933EEA8
+P 4550 3550
+F 0 "U1" H 4800 3150 60  0000 R CNN
+F 1 "CAT4101" H 4800 3950 60  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:TO-263-5Lead" H 4500 4250 60  0001 C CNN
+F 3 "https://github.com/netz39/kicad_parts/blob/cat4101/datasheets/CAT4101.PDF" H 4650 4350 60  0001 C CNN
+F 4 "CAT4101TV-T75CT-ND" H 4550 4150 60  0001 C CNN "DIGIKEY"
+	1    4550 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 5933EF6F
+P 4550 4300
+F 0 "#PWR01" H 4550 4050 50  0001 C CNN
+F 1 "GND" H 4550 4150 50  0000 C CNN
+F 2 "" H 4550 4300 50  0000 C CNN
+F 3 "" H 4550 4300 50  0000 C CNN
+	1    4550 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 4300 4550 4100
+$Comp
+L VCC #PWR02
+U 1 1 5933EF9B
+P 3800 3150
+F 0 "#PWR02" H 3800 3000 50  0001 C CNN
+F 1 "VCC" H 3800 3300 50  0000 C CNN
+F 2 "" H 3800 3150 50  0000 C CNN
+F 3 "" H 3800 3150 50  0000 C CNN
+	1    3800 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3150 3800 3300
+Wire Wire Line
+	3800 3300 4050 3300
+$Comp
+L R R2
+U 1 1 5933EFE4
+P 3800 3950
+F 0 "R2" V 3880 3950 50  0000 C CNN
+F 1 "1.2K" V 3800 3950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 3730 3950 50  0001 C CNN
+F 3 "" H 3800 3950 50  0000 C CNN
+	1    3800 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5933F029
+P 3600 3950
+F 0 "R1" V 3680 3950 50  0000 C CNN
+F 1 "1K" V 3600 3950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 3530 3950 50  0001 C CNN
+F 3 "" H 3600 3950 50  0000 C CNN
+	1    3600 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3800 4050 3800
+Connection ~ 3800 3800
+Wire Wire Line
+	3600 4100 3800 4100
+$Comp
+L GND #PWR03
+U 1 1 5933F0A3
+P 3800 4300
+F 0 "#PWR03" H 3800 4050 50  0001 C CNN
+F 1 "GND" H 3800 4150 50  0000 C CNN
+F 2 "" H 3800 4300 50  0000 C CNN
+F 3 "" H 3800 4300 50  0000 C CNN
+	1    3800 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 4100 3800 4300
+$Comp
+L VCC #PWR04
+U 1 1 5933F124
+P 3000 3150
+F 0 "#PWR04" H 3000 3000 50  0001 C CNN
+F 1 "VCC" H 3000 3300 50  0000 C CNN
+F 2 "" H 3000 3150 50  0000 C CNN
+F 3 "" H 3000 3150 50  0000 C CNN
+	1    3000 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 5933F13E
+P 3000 3400
+F 0 "C1" H 3025 3500 50  0000 L CNN
+F 1 "100n" H 3025 3300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 3038 3250 50  0001 C CNN
+F 3 "" H 3000 3400 50  0000 C CNN
+	1    3000 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 5933F17B
+P 3000 3650
+F 0 "#PWR05" H 3000 3400 50  0001 C CNN
+F 1 "GND" H 3000 3500 50  0000 C CNN
+F 2 "" H 3000 3650 50  0000 C CNN
+F 3 "" H 3000 3650 50  0000 C CNN
+	1    3000 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3150 3000 3250
+Wire Wire Line
+	3000 3550 3000 3650
+Text GLabel 3850 3600 0    39   Input ~ 0
+PWM
+Text GLabel 5200 3300 2    39   Input ~ 0
+LED
+Wire Wire Line
+	5200 3300 5050 3300
+$Comp
+L VCC #PWR06
+U 1 1 5933F53B
+P 6150 3200
+F 0 "#PWR06" H 6150 3050 50  0001 C CNN
+F 1 "VCC" H 6150 3350 50  0000 C CNN
+F 2 "" H 6150 3200 50  0000 C CNN
+F 3 "" H 6150 3200 50  0000 C CNN
+	1    6150 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 5933F559
+P 6200 4350
+F 0 "#PWR07" H 6200 4100 50  0001 C CNN
+F 1 "GND" H 6200 4200 50  0000 C CNN
+F 2 "" H 6200 4350 50  0000 C CNN
+F 3 "" H 6200 4350 50  0000 C CNN
+	1    6200 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3600 4050 3600
+Text GLabel 6400 3300 0    39   Output ~ 0
+PWM
+$Comp
+L CONN_01X02 P2
+U 1 1 593405E6
+P 6750 4200
+F 0 "P2" H 6750 4350 50  0000 C CNN
+F 1 "CONN_01X02" V 6850 4200 50  0000 C CNN
+F 2 "Connect:PINHEAD1-2" H 6750 4200 50  0001 C CNN
+F 3 "" H 6750 4200 50  0000 C CNN
+	1    6750 4200
+	1    0    0    -1  
+$EndComp
+Text GLabel 6450 4250 0    39   Output ~ 0
+LED
+$Comp
+L CONN_01X03 P1
+U 1 1 593413B8
+P 6750 3400
+F 0 "P1" H 6750 3600 50  0000 C CNN
+F 1 "CONN_01X03" V 6850 3400 50  0000 C CNN
+F 2 "Connect:PINHEAD1-3" H 6750 3400 50  0001 C CNN
+F 3 "" H 6750 3400 50  0000 C CNN
+	1    6750 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 59341475
+P 6400 3600
+F 0 "#PWR08" H 6400 3350 50  0001 C CNN
+F 1 "GND" H 6400 3450 50  0000 C CNN
+F 2 "" H 6400 3600 50  0000 C CNN
+F 3 "" H 6400 3600 50  0000 C CNN
+	1    6400 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3600 6400 3500
+Wire Wire Line
+	6400 3500 6550 3500
+Wire Wire Line
+	6400 3300 6550 3300
+Wire Wire Line
+	6550 3400 6150 3400
+Wire Wire Line
+	6150 3400 6150 3200
+Wire Wire Line
+	6550 4250 6450 4250
+Wire Wire Line
+	6550 4150 6200 4150
+Wire Wire Line
+	6200 4150 6200 4350
+$EndSCHEMATC
