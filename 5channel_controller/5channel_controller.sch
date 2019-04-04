@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L n39-kicad:CAT4101 U8
+L 5channel_controller-rescue:CAT4101-n39-kicad U8
 U 1 1 5CA233AD
 P 10150 5300
 F 0 "U8" H 10150 5837 60  0000 C CNN
@@ -104,7 +104,7 @@ Connection ~ 9600 6050
 Wire Wire Line
 	9600 6050 9200 6050
 $Comp
-L n39-kicad:CAT4101 U7
+L 5channel_controller-rescue:CAT4101-n39-kicad U7
 U 1 1 5CA24C71
 P 8050 5300
 F 0 "U7" H 8050 5837 60  0000 C CNN
@@ -193,7 +193,7 @@ Connection ~ 7500 6050
 Wire Wire Line
 	7500 6050 7100 6050
 $Comp
-L n39-kicad:CAT4101 U5
+L 5channel_controller-rescue:CAT4101-n39-kicad U5
 U 1 1 5CA25256
 P 5900 6600
 F 0 "U5" H 5900 7137 60  0000 C CNN
@@ -282,7 +282,7 @@ Connection ~ 5350 7350
 Wire Wire Line
 	5350 7350 4950 7350
 $Comp
-L n39-kicad:CAT4101 U3
+L 5channel_controller-rescue:CAT4101-n39-kicad U3
 U 1 1 5CA25287
 P 3850 6600
 F 0 "U3" H 3850 7137 60  0000 C CNN
@@ -371,7 +371,7 @@ Connection ~ 3300 7350
 Wire Wire Line
 	3300 7350 2900 7350
 $Comp
-L n39-kicad:CAT4101 U1
+L 5channel_controller-rescue:CAT4101-n39-kicad U1
 U 1 1 5CA261B0
 P 1850 6600
 F 0 "U1" H 1850 7137 60  0000 C CNN
@@ -1524,11 +1524,11 @@ Text GLabel 8800 2150 3    39   Input ~ 0
 DispWiFi
 Text GLabel 8450 2150 3    39   Input ~ 0
 DispACT
-Text GLabel 7400 1500 2    39   Output ~ 0
+Text GLabel 7400 1600 2    39   Output ~ 0
 DispACT
-Text GLabel 7400 1400 2    39   Output ~ 0
+Text GLabel 7400 1500 2    39   Output ~ 0
 DispWiFi
-Text GLabel 7400 2900 2    39   Output ~ 0
+Text GLabel 7400 1700 2    39   Output ~ 0
 DispERR
 Wire Wire Line
 	8450 2150 8450 2050
@@ -1542,8 +1542,6 @@ Wire Wire Line
 	9850 2150 9850 2050
 Wire Wire Line
 	10200 2150 10200 2050
-Wire Wire Line
-	7250 1400 7400 1400
 Wire Wire Line
 	7250 1500 7400 1500
 Wire Wire Line
@@ -1572,4 +1570,59 @@ Wire Wire Line
 	10550 2150 10550 2050
 Wire Wire Line
 	10900 2150 10900 2050
+$Comp
+L Connector_Generic:Conn_01x04 J8
+U 1 1 5CA70DC7
+P 4000 3250
+F 0 "J8" H 3920 2825 50  0000 C CNN
+F 1 "UART" H 3920 2916 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4000 3250 50  0001 C CNN
+F 3 "~" H 4000 3250 50  0001 C CNN
+	1    4000 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0127
+U 1 1 5CA70ED6
+P 4400 3450
+F 0 "#PWR0127" H 4400 3200 50  0001 C CNN
+F 1 "GND" H 4405 3277 50  0000 C CNN
+F 2 "" H 4400 3450 50  0001 C CNN
+F 3 "" H 4400 3450 50  0001 C CNN
+	1    4400 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0128
+U 1 1 5CA7108C
+P 4400 3000
+F 0 "#PWR0128" H 4400 2850 50  0001 C CNN
+F 1 "VCC" H 4417 3173 50  0000 C CNN
+F 2 "" H 4400 3000 50  0001 C CNN
+F 3 "" H 4400 3000 50  0001 C CNN
+	1    4400 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3050 4400 3050
+Wire Wire Line
+	4400 3050 4400 3000
+Wire Wire Line
+	4400 3350 4400 3450
+Wire Wire Line
+	4200 3350 4400 3350
+Text GLabel 4300 3150 2    39   BiDi ~ 0
+SCL
+Text GLabel 4300 3250 2    39   BiDi ~ 0
+SDA
+Wire Wire Line
+	4200 3150 4300 3150
+Wire Wire Line
+	4200 3250 4300 3250
+Wire Wire Line
+	7250 1700 7400 1700
+Text GLabel 7400 2900 2    39   Output ~ 0
+FAN
+Wire Wire Line
+	7250 1600 7400 1600
 $EndSCHEMATC

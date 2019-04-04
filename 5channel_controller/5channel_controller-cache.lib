@@ -1,6 +1,27 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# 5channel_controller-rescue_CAT4101-n39-kicad
+#
+DEF 5channel_controller-rescue_CAT4101-n39-kicad U 0 40 Y Y 1 F N
+F0 "U" 250 -400 60 H V R CNN
+F1 "5channel_controller-rescue_CAT4101-n39-kicad" 250 400 60 H V R CNN
+F2 "TO_SOT_Packages_SMD:TO-263-5Lead" -50 700 60 H I C CNN
+F3 "https://github.com/netz39/kicad_parts/blob/cat4101/datasheets/CAT4101.PDF" 100 800 60 H I C CNN
+F4 "CAT4101TV-T75CT-ND" 0 600 60 H I C CNN "DIGIKEY"
+$FPLIST
+ TO_SOT_Packages_SMD:TO-263-5Lead
+$ENDFPLIST
+DRAW
+S -300 350 300 -350 0 1 0 N
+X EN/PWM 1 -500 -50 200 R 50 50 1 1 I
+X VCC 2 -500 250 200 R 50 50 1 1 W
+X GND 3 0 -550 200 U 50 50 1 1 P
+X RSET 4 -500 -250 200 R 50 50 1 1 I
+X LED 5 500 250 200 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
 # Connector_Generic_Conn_01x04
 #
 DEF Connector_Generic_Conn_01x04 J 0 40 Y N 1 F N
@@ -260,27 +281,6 @@ P 2 0 1 0 0 50 0 120 N
 P 2 0 1 0 100 50 -100 50 N
 X 1 1 -200 0 100 R 50 50 0 1 P
 X 2 2 200 0 100 L 50 50 0 1 P
-ENDDRAW
-ENDDEF
-#
-# n39-kicad_CAT4101
-#
-DEF n39-kicad_CAT4101 U 0 40 Y Y 1 F N
-F0 "U" 250 -400 60 H V R CNN
-F1 "n39-kicad_CAT4101" 250 400 60 H V R CNN
-F2 "TO_SOT_Packages_SMD:TO-263-5Lead" -50 700 60 H I C CNN
-F3 "https://github.com/netz39/kicad_parts/blob/cat4101/datasheets/CAT4101.PDF" 100 800 60 H I C CNN
-F4 "CAT4101TV-T75CT-ND" 0 600 60 H I C CNN "DIGIKEY"
-$FPLIST
- TO_SOT_Packages_SMD:TO-263-5Lead
-$ENDFPLIST
-DRAW
-S -300 350 300 -350 0 1 0 N
-X EN/PWM 1 -500 -50 200 R 50 50 1 1 I
-X VCC 2 -500 250 200 R 50 50 1 1 W
-X GND 3 0 -550 200 U 50 50 1 1 P
-X RSET 4 -500 -250 200 R 50 50 1 1 I
-X LED 5 500 250 200 L 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #
